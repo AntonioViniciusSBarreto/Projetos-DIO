@@ -1,4 +1,8 @@
 package Exercicio2;
 
-public class SaudeBemEstar {
+public record SaudeBemEstar(double valor) implements Produto {
+    @Override
+    public double ValorImposto() {
+        return valor + (valor * 0.015);
+    }
 }
